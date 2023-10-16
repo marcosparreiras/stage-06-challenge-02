@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: #000;
+    --input-bg-color: #06181c;
+    --btn-bg-color: #065e7c;
+    --table-header-bg-color: #092d38;
+    --table-body-bg-primary-color: rgba(6, 21, 25, 0.5);
+    --table-body-bg-secondary-color: #06181c;
+    --text-color: #e1e1e6;
+    --palceholder-text-color: #7c7c8a;
+    --table-btn-text-color: #f75a68;
+}
+
+body * {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+#app {
+    margin: 11.5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8.7rem;
+    max-width: 112rem;
+    padding: 0 1.6rem;
+}
+
+header,
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search {
+    gap: 0.8rem;
+}
+
+.search img {
+    width: 18.6rem;
+    height: 3.3rem;
+}
+
+.search input {
+    padding: 1.6rem;
+    border-radius: 0.5rem;
+    width: 43rem;
+    background-color: var(--input-bg-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    border: none;
+}
+
+.search input::placeholder {
+    color: var(--palceholder-text-color);
+}
+
+.search button {
+    width: fit-content;
+    padding: 1.2rem 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: var(--btn-bg-color);
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: var(--text-color);
+}
+
+.search button:hover > span,
+.search button:hover > svg {
+    color: var(--btn-bg-color);
+    fill: var(--btn-bg-color);
+}
+
+.search button svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--text-color);
+}
+
+.search button span {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border: 2px solid var(--btn-bg-color);
+}
+
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+
+table thead th,
+table tbody td {
+    padding: 1.6rem 2.4rem;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+}
+
+table thead tr th:first-child {
+    width: 40%;
+}
+
+table tbody tr td.user-data {
+    display: flex;
+    gap: 1.6rem;
+}
+
+table tbody tr td.user-data img {
+    border-radius: 50%;
+    width: 5.6rem;
+    height: 5.6rem;
+    object-fit: cover;
+}
+
+table tbody tr td.user-data div span {
+    white-space: nowrap;
+    display: block;
+}
+
+table tbody tr td.user-data div a {
+    text-decoration: none;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+table tbody tr td button {
+    color: var(--table-btn-text-color);
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    transition: all 300ms;
+}
+
+table tbody tr td button:hover {
+    filter: brightness(0.9);
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--table-body-bg-primary-color);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--table-body-bg-secondary-color);
+}
+
+.table-empty {
+    min-height: 50rem;
+    background-color: var(--table-body-bg-primary-color);
+}
+
+.table-empty tbody tr td {
+    padding: 0;
+}
+
+.table-empty tbody tr td div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.table-empty img {
+    width: 13.2rem;
+    height: 12.5rem;
+}
+
+.table-empty span {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: var(--palceholder-text-color);
+}
